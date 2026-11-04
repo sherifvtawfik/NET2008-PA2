@@ -120,3 +120,27 @@ The program displays an error message and exits with code 1.
 
 
 
+
+
+\## How OS Version Comparison Works
+
+
+
+The auditor compares operating system versions by splitting them into numeric components.
+
+
+
+For example, version 15.10 becomes (15, 10), while version 15.2 becomes (15, 2).
+
+
+
+This is important because software versions should not be compared as decimal numbers.
+
+
+
+The program checks whether each device's OS version meets the minimum version specified in the YAML policy.
+
+
+
+
+
