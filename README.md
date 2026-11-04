@@ -60,3 +60,63 @@ The program generates audit.json containing:
 
 The program handles missing command-line arguments, missing input files, and invalid XML or YAML data.
 
+
+
+
+
+\## Testing
+
+
+
+I tested the program using the provided XML inventory and YAML policy.
+
+
+
+\### Successful Audit
+
+Command:
+
+python pa2.py PA2\_sample1.xml PA2\_policy.yaml
+
+
+
+Result:
+
+\- 5 valid devices
+
+\- 1 skipped device
+
+\- 4 compliance violations
+
+\- audit.json generated successfully
+
+
+
+\### Missing Arguments
+
+Command:
+
+python pa2.py
+
+
+
+Result:
+
+The program displays a usage message and exits with code 2.
+
+
+
+\### Missing XML File
+
+Command:
+
+python pa2.py missing.xml PA2\_policy.yaml
+
+
+
+Result:
+
+The program displays an error message and exits with code 1.
+
+
+
